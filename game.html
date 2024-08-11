@@ -104,7 +104,16 @@
             ctx.fillText('Score: ' + score, 10, 20);
 
         }
+        function collision(x, y, array) {
+        for (let i = 0; i < array.length; i++) {
+            if (x === array[i].x && y === array[i].y) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    const game = setInterval(draw, 100);
 </script>
 
 </html>
